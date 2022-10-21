@@ -1,0 +1,23 @@
+server:
+  port: 9092
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://35.193.245.172:1111/java3user
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
+# JWT
+myjwt:
+  secretkey: ${secretkey}
+  audience: ${audience}
+  issuer: ${issuer}
